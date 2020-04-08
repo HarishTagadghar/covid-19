@@ -14,11 +14,11 @@ fetch(`https://covid19.mathdro.id/api/countries/china/`).then((respond)=>{
         if(data.error){
             msgOne.textContent = data.error.message
         }else {
-          county.textContent = `country: china`
-            msgOne.textContent = `confirmed: ${new Intl.NumberFormat().format(data.confirmed.value)}`;
-            msgTwo.textContent = `recovered: ${new Intl.NumberFormat().format(data.recovered.value)}`;
-            msgThree.textContent = `deaths: ${new Intl.NumberFormat().format(data.deaths.value)}`;
-
+          county.textContent = `Country: china`
+            msgOne.textContent = `Confirmed: ${new Intl.NumberFormat().format(data.confirmed.value)}`;
+            msgTwo.textContent = `Recovered: ${new Intl.NumberFormat().format(data.recovered.value)}`;
+            msgThree.textContent = `Deaths: ${new Intl.NumberFormat().format(data.deaths.value)}`;
+       
         }
     })
 })
@@ -38,14 +38,16 @@ if(e.key === 'Enter')
             if(data.error){
                 msgOne.textContent = data.error.message
             }else {
-              county.textContent = `country: ${input.value}`
-                msgOne.textContent = `confirmed: ${new Intl.NumberFormat().format(data.confirmed.value)}`;
-                msgTwo.textContent = `recovered: ${new Intl.NumberFormat().format(data.recovered.value)}`;
-                msgThree.textContent = `deaths: ${new Intl.NumberFormat().format(data.deaths.value)}`;
+              county.textContent = `Country: ${input.value}`
+                msgOne.textContent = `Confirmed: ${new Intl.NumberFormat().format(data.confirmed.value)}`;
+                msgTwo.textContent = `Recovered: ${new Intl.NumberFormat().format(data.recovered.value)}`;
+                msgThree.textContent = `Deaths: ${new Intl.NumberFormat().format(data.deaths.value)}`;
                     setTimeout(() => {
                         input.value = ''
 
                     }, 1);
+
+               
             }
         })
     })
